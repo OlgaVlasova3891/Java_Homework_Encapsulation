@@ -13,6 +13,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentRadioStationMin() {
         Radio radio = new Radio();
@@ -22,6 +23,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentRadioStationMax() {
         Radio radio = new Radio();
@@ -51,6 +53,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldGetCurrentRadioStationAboveMin() {
         Radio radio = new Radio();
@@ -60,6 +63,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentRadioStationAboveMax() {
         Radio radio = new Radio();
@@ -69,6 +73,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseChannel() {
         Radio radio = new Radio();
@@ -79,6 +84,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseChannelMax() {
         Radio radio = new Radio();
@@ -89,7 +95,8 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-            @Test
+
+    @Test
     public void shouldDecreaseChannel() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(7);
@@ -99,6 +106,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseChannelMin() {
         Radio radio = new Radio();
@@ -109,6 +117,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldGetCurrentVolume() {
         Radio radio = new Radio();
@@ -118,6 +127,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVolume() {
         Radio radio = new Radio();
@@ -127,6 +137,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVolumeMax() {
         Radio radio = new Radio();
@@ -136,6 +147,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVolumeLowMax() {
         Radio radio = new Radio();
@@ -145,6 +157,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVoAboveMax() {
         Radio radio = new Radio();
@@ -154,6 +167,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVolumeMin() {
         Radio radio = new Radio();
@@ -163,6 +177,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVolumeLowMin() {
         Radio radio = new Radio();
@@ -172,6 +187,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetCurrentVolumeAboveMin() {
         Radio radio = new Radio();
@@ -181,6 +197,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseVolume() {
         Radio radio = new Radio();
@@ -191,6 +208,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseVolumeMax() {
         Radio radio = new Radio();
@@ -201,6 +219,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseVolume() {
         Radio radio = new Radio();
@@ -210,6 +229,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseVolumeMin() {
         Radio radio = new Radio();
