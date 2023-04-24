@@ -3,8 +3,31 @@ package ru.netology.javaqa.javamvnencapsulation.service;
 public class Radio {
     private int currentRadioStation; // Создали поле, в котором будет храниться информация о радиоканалах
     private int currentVolume; // Создали поле, в котором будет храниться информация о звуке
+    private int radioStationsQuantity = 10;
 
-    public int getCurrentRadioStation() {
+    public Radio() {
+    }
+
+    public Radio(int radioStationsQuantity) {
+        this.radioStationsQuantity = radioStationsQuantity;
+    }
+
+    public int getRadioStationsQuantity() {
+        return radioStationsQuantity;
+    }
+
+
+    public void setRadioStationsQuantity(int newRadioStationsQuantity) {
+        if (newRadioStationsQuantity < 10) {
+            return;
+        }
+        if (newRadioStationsQuantity > 10) {
+            return;
+        }
+        radioStationsQuantity = newRadioStationsQuantity;
+    }
+
+        public int getCurrentRadioStation() {
         return currentRadioStation;
     }
 

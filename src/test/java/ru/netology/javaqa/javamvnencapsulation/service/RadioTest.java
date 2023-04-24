@@ -5,6 +5,40 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
+    public void shouldGetRadioStationsQuantity() {
+        Radio radio = new Radio();
+        radio.setRadioStationsQuantity(10);
+        int expected = 10;
+        int actual = radio.getRadioStationsQuantity();
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void shouldGetRadioStationsQuantityLow() {
+        Radio radio = new Radio();
+        radio.setRadioStationsQuantity(9);
+        int expected = 10;
+        int actual = radio.getRadioStationsQuantity();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldGetRadioStationsQuantityAbove() {
+        Radio radio = new Radio();
+        radio.setRadioStationsQuantity(11);
+        int expected = 10;
+        int actual = radio.getRadioStationsQuantity();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetConstructorStationsQuantity() {
+        Radio radio = new Radio(25);
+        Assertions.assertEquals(25, radio.getRadioStationsQuantity());
+    }
+
+    @Test
     public void shouldGetCurrentRadioStation() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(5);
@@ -233,7 +267,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeMin() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(0);
+        radio.setCurrentVolume(-1);
         int expected = 0;
         int actual = radio.decreaseVolume();
 
