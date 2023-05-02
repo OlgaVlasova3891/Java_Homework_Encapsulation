@@ -7,35 +7,45 @@ public class RadioTest {
     @Test
     public void shouldGetRadioStationsQuantity() {
         Radio radio = new Radio();
-        radio.setRadioStationsQuantity(10);
-        int expected = 10;
-        int actual = radio.getRadioStationsQuantity();
+        radio.setCurrentRadioStation(9);
+        int expected = 9;
+        int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
 
     @Test
-    public void shouldGetRadioStationsQuantityLow() {
-        Radio radio = new Radio();
-        radio.setRadioStationsQuantity(9);
-        int expected = 10;
-        int actual = radio.getRadioStationsQuantity();
+    public void shouldGetOnePointLowMaxRadioStation() {
+        Radio radio = new Radio(19);
+        radio.setCurrentRadioStation(18);
+        int expected = 18;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void shouldGetAboveMaxRadioStation() {
+        Radio radio = new Radio(19);
+        radio.setCurrentRadioStation(20);
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldGetRadioStationsQuantityAbove() {
-        Radio radio = new Radio();
-        radio.setRadioStationsQuantity(11);
-        int expected = 10;
-        int actual = radio.getRadioStationsQuantity();
+    public void shouldGetLowMaxRadioStation() {
+        Radio radio = new Radio(19);
+        radio.setCurrentRadioStation(15);
+        int expected = 15;
+        int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldSetConstructorStationsQuantity() {
-        Radio radio = new Radio(25);
-        Assertions.assertEquals(25, radio.getRadioStationsQuantity());
+    public void shouldGetMaxRadioStation() {
+        Radio radio = new Radio(19);
+        Assertions.assertEquals(0, radio.getCurrentRadioStation());
     }
 
     @Test

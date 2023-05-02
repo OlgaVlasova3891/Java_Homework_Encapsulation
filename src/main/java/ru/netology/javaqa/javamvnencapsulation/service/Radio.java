@@ -1,33 +1,22 @@
 package ru.netology.javaqa.javamvnencapsulation.service;
 
 public class Radio {
-    private int currentRadioStation; // Создали поле, в котором будет храниться информация о радиоканалах
-    private int currentVolume; // Создали поле, в котором будет храниться информация о звуке
-    private int radioStationsQuantity = 10;
+    private int currentRadioStation;
+    private int currentVolume;
+    private int maxRadioStation;
 
     public Radio() {
+
+        maxRadioStation = 9;
     }
 
-    public Radio(int radioStationsQuantity) {
-        this.radioStationsQuantity = radioStationsQuantity;
+    public Radio(int maxRadioStation) {
+
+        this.maxRadioStation = maxRadioStation;
     }
 
-    public int getRadioStationsQuantity() {
-        return radioStationsQuantity;
-    }
+    public int getCurrentRadioStation() {
 
-
-    public void setRadioStationsQuantity(int newRadioStationsQuantity) {
-        if (newRadioStationsQuantity < 10) {
-            return;
-        }
-        if (newRadioStationsQuantity > 10) {
-            return;
-        }
-        radioStationsQuantity = newRadioStationsQuantity;
-    }
-
-        public int getCurrentRadioStation() {
         return currentRadioStation;
     }
 
@@ -35,7 +24,7 @@ public class Radio {
         if (newCurrentRadioStation < 0) {
             return;
         }
-        if (newCurrentRadioStation > 9) {
+        if (newCurrentRadioStation > maxRadioStation) {
             return;
         }
         currentRadioStation = newCurrentRadioStation;
@@ -43,7 +32,7 @@ public class Radio {
 
     public int increaseChannel() {
 
-        if (currentRadioStation < 9) {
+        if (currentRadioStation < maxRadioStation) {
             currentRadioStation = currentRadioStation + 1;
         } else {
             currentRadioStation = 0;
@@ -55,7 +44,7 @@ public class Radio {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
         } else {
-            currentRadioStation = 9;
+            currentRadioStation = maxRadioStation;
         }
         return currentRadioStation;
     }
